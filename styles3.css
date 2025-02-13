@@ -1,0 +1,360 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.plan {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: 15% auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+/*------------------------------------------*/
+
+#quienes-somos {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#quienes-somos:hover {
+    transform: scale(1.02);
+}
+/*-------------------------------------------------------*/
+
+/* Estilos para los títulos */
+h1 {
+    font-size: 2.5em;
+    color: #f39c12;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2em;
+    color: #2980b9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #27ae60;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación al pasar el cursor */
+h1:hover, h2:hover, h3:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+/*----------------------------------------------------------*/
+
+#servicios {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#servicios h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #2980b9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.servicio {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 5px solid #f39c12;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.servicio h3 {
+    color: #27ae60;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.servicio ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servicio ul li {
+    padding: 5px 0;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.servicio ul li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: #f39c12;
+}
+.servicio {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+/*------------------------------------------------*/
+
+/* 
+Estilos para el modal (ventana emergente) 
+*/
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+/* 
+Estilos para el contenido del modal 
+*/
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: 15% auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 
+Estilos para el botón de cerrar modal 
+*/
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 
+Efecto hover en el botón de cerrar 
+*/
+.close:hover {
+    color: black;
+}
+
+/* 
+Estilos para el botón "Más Información" 
+*/
+.btn-info {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12; /* Color naranja */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease; /* Animaciones */
+}
+
+/* 
+Efecto hover en el botón "Más Información" 
+*/
+.btn-info:hover {
+    background-color: #e67e22; /* Naranja más oscuro */
+    transform: scale(1.1);
+}
+
+/*-------------------------------------------------*/
+
+#beneficios {
+    background: #fff;
+    padding: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#beneficios h2 {
+    color: #f39c12;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#beneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+#beneficios li {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/*----------------------------------------------*/
+
+/* Botones de elegir */
+.btn-elegir {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-elegir:hover {
+    background: #218838;
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Botón de confirmar en el modal */
+.btn-confirmar {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-confirmar:hover {
+    background: #0056b3;
+}
